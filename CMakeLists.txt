@@ -7,5 +7,5 @@ add_executable(synad
         main.c
         Utility.h
         find_files.c
-        find_and_link_files.h
+        find_files.h
 )

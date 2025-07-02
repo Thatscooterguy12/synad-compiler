@@ -1,4 +1,4 @@
-/*   Copyright [2025] [contributors of synad(see contributors.txt)]
+/*   Copyright 2025 contributors of synad(see contributors.txt)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 	 you may not use this file except in compliance with the License.
@@ -14,7 +14,6 @@ Licensed under the Apache License, Version 2.0 (the "License");
 
 #ifndef FIND_LINK_FILES_H
 #define FIND_LINK_FILES_H
-#include <stdint.h>
 
-void start_service(uint64_t size, const char* arg[]);
+void start_service(int size, const char* arg[]);
 #endif

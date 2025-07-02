@@ -105,7 +105,7 @@ void start_service(const int size, const char* arguments[]) {
 		}
 	}
 	if (!(found_target && found_source)) {
-		printf("must have a target and a source file to compile");
+		printf("must have a target and a source file to compile\ntype \"synad --help\" for more info");
 	}
 	free(tags_locations);
 }

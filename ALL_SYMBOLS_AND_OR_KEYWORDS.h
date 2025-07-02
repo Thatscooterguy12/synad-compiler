@@ -12,7 +12,10 @@ Licensed under the Apache License, Version 2.0 (the "License");
 	 See the License for the specific language governing permissions and
 	 limitations under the License.*/
 
-//this file should be used for reference only DO NOT INCLUDE this header file into any file I will strike you with lightning. just include the list in the file for clarity
+// WARNING: This file is for copying (reference) only.
+// DO NOT INCLUDE this header file in any source code!
+// Its purpose is to provide a clear, readable list of items for manual inclusion.
+// If you decide to use the file I Will Strike you with lighting.
 
 #ifndef ALL_SYMBOLS_AND_OR_KEYWORDS_H
 #define ALL_SYMBOLS_AND_OR_KEYWORDS_H

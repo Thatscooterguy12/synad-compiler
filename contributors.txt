@@ -1,0 +1,7 @@
+# Contributor List for the Synad Compiler Project
+#
+# Notation: github_name ({optional} real_name) : {optional} role
+#
+# Please keep entries sorted alphabetically by GitHub name for easy lookup.
+
+ThatScooterGuy (David Ludtke) : Lead Developer

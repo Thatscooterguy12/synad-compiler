@@ -1,0 +1,32 @@
+#how to contribute
+
+#coding styles
+a tab should be 2 spaces.
+a line of code should be no more than 170 chars. this means the page should no scroll at all.
+the starting brace int main() { <- this one should always be on the same line as the function/conditionals definition.
+if the varible is multiworded snake case should be used snake case is char_read.
+do not abrevate words unless it is a widly known one eg. character -> char, integer -> int, boolean -> bool, argument -> arg. don't do something dumb like control -> cont.
+every variable should have a meaningfull name, some exeptions are things like i in for-loops, or if their is truly no good name for it (making an empty list to put it in another varible) you should put what it is, eg. empty_list, temporary.
+everything should be spelled correctly if you do not know how to spell it look it up.
+do not capitalize any varible name.
+now to the important stuff.
+every single case should always be acounted for do not trust that something is the correct value. aka always check for the right value as much as you possible can.
+when using malloc, calloc, or realloc always check and handle if the allocation failed.
+do not use switch cases always use if else chains they are much more readable.
+avoid deep nesting anything above 3 is too much. classes namespaces and functions do not count towards 3.
+one statement per line.
+you should give spacing between headers and the start of the varibles.
+you should space things good : x = y + z; bad : x=y+z;.
+do not return error codes if something goes wrong print to console and exit.
+do not use abstraction if it ruins code readablity
+use comments if you made confusing code and explain what it's doing.
+do not make confusing code if you do not have to.
+do not use global varibles.
+only pass along varible if you need them.
+each file should have one general purpose eg. find_files for validating file.
+you should always make code that tells you exactly what it does and is direct in it.
+
+#first time contributers
+as soon as you contribute put your name in the contributers.txt.
+also join the discord for the project because it makes communicating alot easier.
+discord: https://discord.gg/A63Xwhxg

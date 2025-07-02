@@ -7,5 +7,4 @@ add_executable(synad
         main.c
         find_files.c
         find_files.h
-        lexi_parse.c
 )

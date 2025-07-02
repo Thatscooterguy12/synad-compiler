@@ -2,6 +2,6 @@
 #
 # Notation: github_name ({optional} real_name) : {optional} role
 #
-# Please keep entries sorted alphabetically by GitHub name for easy lookup.
+# Please keep entries sorted alphabetically by GitHub name for easy lookup. 
 
 ThatScooterGuy (David Ludtke) : Lead Developer

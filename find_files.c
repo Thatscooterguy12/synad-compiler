@@ -84,6 +84,11 @@ void find_file(const int target, const char* argument) {
 }
 void start_service(const int size, const char* arguments[]) {
 	int* tags_locations = find_tags(size, arguments);
+	auto file_locations = (int*)(calloc(size, sizeof(int)));
+	if (file_locations == NULL) {
+		printf("memory allocation failed");
+		exit(EXIT_FAILURE);
+	}
 	if (*arguments[1] != '-') {
 		printf("an argument type must be declared before naming files\ntype \"synad --help\" for more info on how to format arguments");
 	}
@@ -97,12 +102,16 @@ void start_service(const int size, const char* arguments[]) {
 			}
 		}
 		find_file(tags_locations[i], arguments[i]);
+		file_locations[i] = tags_locations[i];
 		if (tags_locations[i] == 1 && !found_source) {
 			found_source = true;
 		}
 		else if (tags_locations[i] == 3 && !found_target) {
 			found_target = true;
 		}
+	}
+	for (auto i = 0; i < size; i++) {
+		printf("%d\n",file_locations[i]);
 	}
 	if (!(found_target && found_source)) {
 		printf("must have a target and a source file to compile\ntype \"synad --help\" for more info");

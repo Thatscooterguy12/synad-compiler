@@ -6,6 +6,6 @@ add_executable(synad
         ALL_SYMBOLS_AND_OR_KEYWORDS.h
         main.c
         Utility.h
-        find_and_link_files.c
+        find_files.c
         find_and_link_files.h
 )

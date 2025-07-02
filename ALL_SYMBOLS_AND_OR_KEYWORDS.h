@@ -26,13 +26,13 @@ const char* keywords[36] = {"if", "this", "pass", "else", "else-if", "give", "su
 const char* default_types[13] = {"int", "double", "float", "bool", "printer", "pnt" /*pointer*/, "unsigned_int",
 	"unsigned_double","unsigned_float","char","auto", "void", "exception"};
 const char* multi_char_terminators[3] = {"//", "/*", "*/"};
-const char* multi_char_assignment_operators[7] = {"*=", "/=", "+=", "-=", "%=", "++", "--"};
+const char* multi_char_assignment_operators[8] = {"*=", "/=", "+=", "-=", "%=", "^=","++", "--"};
 const char* multi_char_comparator[12] = {"==", ">=", "<=", "!=", "|<", "|>", "&<", "&>", "|=", "&=","&&", "||",};
 const char* command_line_arguments[3] = {"-o"/*target file to compile into*/, "-is" /*target source files*/, "-ih"/*target header files*/};
-const char* all_multi_char[100] = {"==", ">=", "<=", "!=", "|<", "|>", "&<", "&>", "|=", "&=","&&", "||","*=",
-	"/=", "+=", "-=", "%=", "++", "--","//", "/*", "*/"};
+const char* all_multi_char[24] = {"==", ">=", "<=", "!=", "|<", "|>", "&<", "&>", "|=", "&=","&&", "||","*=",
+	"/=", "+=", "-=", "%=", "^=","++", "--","//", "/*", "*/"};
 constexpr char single_char_comparator[3] = {'<', '>','!'};
-constexpr char single_char_assignment_operators[6] = {'=', '/', '*', '+', '-', '%'};
+constexpr char single_char_assignment_operators[7] = {'=', '/', '*', '+', '-', '%', "^"};
 constexpr char delimiters[9] = {'(', ')', '[', ']', '{', '}', '\'', '"', '`'};
 constexpr char single_char_terminators[3] = {';', ',', '\n'};\
 constexpr char all_single_char[21] = {';', ',', '\n','(', ')', '[', ']', '{', '}', '\'', '"', '`','=', '/', '*', '+', '-', '%','<', '>','!'};

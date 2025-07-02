@@ -12,9 +12,14 @@ Licensed under the Apache License, Version 2.0 (the "License");
 	 See the License for the specific language governing permissions and
 	 limitations under the License.*/
 
+
+//THIS FILE SHOULD NOT BE EDITED
+
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "find_files.h"
 int* find_tags(const int size, const char* arguments[]) {
 	int* tags = calloc(size, sizeof(int));
 	if (tags == NULL) {
@@ -82,27 +87,29 @@ void find_file(const int target, const char* argument) {
 		fclose(file);
 	}
 }
-void start_service(const int size, const char* arguments[]) {
-	int* tags_locations = find_tags(size, arguments);
-	auto file_locations = (int*)(calloc(size, sizeof(int)));
+void start_service(const int size, const char* arg[]) {
+	int* tags_locations = find_tags(size, arg);
+	const auto file_locations = (int*)(calloc(size, sizeof(int)));
 	if (file_locations == NULL) {
 		printf("memory allocation failed");
 		exit(EXIT_FAILURE);
 	}
-	if (*arguments[1] != '-') {
+	if (*arg[1] != '-') {
 		printf("an argument type must be declared before naming files\ntype \"synad --help\" for more info on how to format arguments");
 	}
 	bool found_target = false;
 	bool found_source = false;
 	for (int i = 2; i < size; i++) {
-		while (*arguments[i] == '-') {
+		while (*arg[i] == '-') {
 			i++;
 			if (i == size) {
 				break;
 			}
 		}
-		find_file(tags_locations[i], arguments[i]);
-		file_locations[i] = tags_locations[i];
+		find_file(tags_locations[i], arg[i]);
+		if (tags_locations[i] != 3) {
+			file_locations[i] = tags_locations[i];
+		}
 		if (tags_locations[i] == 1 && !found_source) {
 			found_source = true;
 		}
@@ -110,11 +117,9 @@ void start_service(const int size, const char* arguments[]) {
 			found_target = true;
 		}
 	}
-	for (auto i = 0; i < size; i++) {
-		printf("%d\n",file_locations[i]);
-	}
 	if (!(found_target && found_source)) {
 		printf("must have a target and a source file to compile\ntype \"synad --help\" for more info");
 	}
 	free(tags_locations);
+	lexi_parse(arg, file_locations);
 }

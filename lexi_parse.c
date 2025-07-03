@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 /*   Copyright 2025 contributors of synad(see contributors.txt)
 
@@ -16,12 +17,6 @@ typedef struct {
 	const char **content;
 	const char **name;
 } file_contents;
-void lexi_parse(const char* arguments[], int* file_locations) {
-	file_contents contents;
-	int arguments_length = sizeof(arguments) / sizeof(arguments[0]); //NOLINT
-	const char* empty_array[arguments_length];
-	contents.name = arguments;
-	contents.content = empty_array;
+void lexi_parse(const char* arguments[],const int* file_locations) {
 
-	free(arguments);
 }

@@ -22,7 +22,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 const char* keywords[36] = {"if", "this", "pass", "else", "else-if", "give", "sudo","class", "new", "delete",
 	"static", "namespace", "using", "include","friend", "private", "public", "return", "const", "set", "switch",
 	"default", "for", "while", "break", "break_all", "continue", "try", "catch", "throw", "exception","operator",
-	"lambda", "sizeof", "go-to","func"};
+	"lambda", "sizeof", "go-to","func"}; 
 const char* default_types[13] = {"int", "double", "float", "bool", "printer", "pnt" /*pointer*/, "unsigned_int",
 	"unsigned_double","unsigned_float","char","auto", "void", "exception"};
 const char* multi_char_terminators[3] = {"//", "/*", "*/"};
